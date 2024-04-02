@@ -1,0 +1,15 @@
+<h3>Listado de Mugiwaras</h3>
+
+<div *ngIf="mugiwaraEliminado; else nadaEliminado">
+    <h3>Mugiwara borrado <small class="text-danger">{{ mugiwaraEliminado }}</small></h3>
+</div>
+
+<ng-template #nadaEliminado>
+    <h3>No hay ningun mugiwara borrado</h3>
+</ng-template>
+
+<button *ngIf="mugiwarasNombres.length > 0" (click)="eliminaMugiwara()" class="btn btn-outline-danger">Borrar ultimo mugiwara</button>
+
+<ul class="mt-2 list-group" >
+    <li class="list-group-item" *ngFor="let nombres of mugiwarasNombres">{{nombres}}</li>
+</ul>

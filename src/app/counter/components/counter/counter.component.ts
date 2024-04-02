@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
     template: '<h1>Hola counter</h1>'
 })
 
-export class NameComponent implements OnInit {
+export class CounterComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
