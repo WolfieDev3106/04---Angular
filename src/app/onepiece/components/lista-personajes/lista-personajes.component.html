@@ -1,0 +1,33 @@
+<h4>Listado de Personajes</h4>
+<ul class="list-group">
+    <li *ngFor="let item of personajesLista; 
+            let i = index; 
+            let esPrimero = first;
+            let esUltimo = last;
+            let esPar = even;
+            let esInpar = odd" class="list-group-item d-flex justify-content-between align-items-center" 
+            [ngClass]="{'list-group-item-dark': esUltimo,
+                        'list-group-item-primary': esPrimero}">
+
+        <div>
+            <span class="text-primary">{{i + 1}}. </span>
+            <strong>{{item.name}}</strong>
+            <span> - Reward: </span>
+            <strong>{{item.reward}}</strong>
+        </div>
+
+        <button class="btn btn-danger" (click)="deleteCharacter(item.id)">X</button>
+
+
+
+
+    </li>
+</ul>
+
+
+<!-- <span> Es par: {{esPar}}</span>
+                <span> Es inpar: {{esInpar}}</span> -->
+<!-- <span> Es el primero: {{esPrimero}}</span> -->
+<!-- <span> Es el ultimo: {{ esUltimo}}</span> -->
+<!-- <li class="list-group-item">Luffy - 3,000,000</li> -->
+<!-- <li class="list-group-item">Zoro - 1,333,000</li> -->
