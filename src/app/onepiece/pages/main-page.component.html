@@ -1,0 +1,10 @@
+<h1>One Piece Personajes</h1>
+
+<div class="row">
+    <div class="col">
+        <op-lista-personajes (onDeleteCharacter)="onDeleteCharacter($event)" [personajesLista]="characters"></op-lista-personajes>
+    </div>
+    <div class="col">
+        <op-agregar-personajes (onNuevoPersonaje)="onNewCharacter($event)"></op-agregar-personajes>
+    </div> 
+</div>
